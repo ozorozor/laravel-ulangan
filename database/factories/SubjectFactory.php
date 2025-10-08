@@ -2,8 +2,6 @@
 
 namespace Database\Factories;
 
-namespace Database\Factories;
-
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SubjectFactory extends Factory
@@ -11,10 +9,10 @@ class SubjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->unique()->randomElement([
-                'Web Development', 'Informatika', 'Desktop Development', 'IOT', 'Game Development'
+            'name' => fake()->randomElement([
+                'MobileDevelopment', 'WebDevelopment', 'IoT', 'GameDevelopment', 'DesktopDevelopment'
             ]),
-            'description' => $this->faker->sentence(8),
+            'description' => fake()->sentence(8),
         ];
     }
 }

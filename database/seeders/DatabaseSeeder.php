@@ -16,9 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-    Subject::factory(5)->create();
-    student::factory(5)->create();
-    Teacher::factory(5)->create();
+    Subject::factory(5)->has(Teacher::factory())->create();
     \App\Models\Guardian::factory(10)->create();
         Classroom::factory()->count(4)->create();
         User::factory()->create([
