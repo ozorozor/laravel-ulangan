@@ -13,7 +13,7 @@ Schema::create('students', function (Blueprint $table) {
     $table->string('name');
     $table->string('alamat');
     $table->string('email')->unique();
-    $table->integer('nilai'); // <- HARUS integer, bukan string
+    $table->integer('nilai'); 
     $table->date('birth_date');
     $table->timestamps();
 });

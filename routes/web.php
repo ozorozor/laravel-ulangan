@@ -7,6 +7,8 @@ use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\GuardianController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/profil', [ProfilController::class, 'profil'])->name('profil');
@@ -15,3 +17,6 @@ Route::get('/student', [StudentController::class, 'index'])->name('student');
 Route::get('/home', [ProfilController::class, 'home'])->name('home');
 Route::get('/guardians', [GuardianController::class, 'index'])->name('guardians');
 Route::get('/classrooms', [ClassroomController::class, 'index'])->name('classrooms.index');
+
+Route::get('/teacher', [TeacherController::class, 'index'])->name('teacher.index');
+Route::get('/subject', [SubjectController::class, 'index'])->name('subject.index');

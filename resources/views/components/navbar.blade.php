@@ -14,6 +14,9 @@
                 <x-nav-link href="{{ route('student') }}" :active="request()->routeIs('student')">Student</x-nav-link>
                 <x-nav-link href="{{ route('guardians') }}" :active="request()->routeIs('guardians')">Guardians</x-nav-link>
                 <x-nav-link href="{{ route('classrooms.index') }}" :active="request()->routeIs('classrooms.index')">Classrooms</x-nav-link>
+                <x-nav-link href="{{ route('teacher.index') }}" :active="request()->routeIs('teacher.index')">Teacher</x-nav-link>
+                <x-nav-link href="{{ route('subject.index') }}" :active="request()->routeIs('subject.index')">Subject</x-nav-link>
+
             </div>
           </div>
         </div>
