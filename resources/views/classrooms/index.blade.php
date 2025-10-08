@@ -5,15 +5,21 @@
         <thead>
             <tr>
                 <th class="border px-4 py-2 bg-gray-200">ID</th>
-                <th class="border px-4 py-2 bg-gray-200">Nama Classroom</th>
+                <th class="border px-4 py-2 bg-gray-200">Nama Kelas</th>
+                <th class="border px-4 py-2 bg-gray-200">Nama Siswa</th>
             </tr>
         </thead>
         <tbody>
             @foreach($classrooms as $classroom)
-            <tr>
-                <td class="border px-4 py-2 text-center bg-gray-200">{{ $classroom->id }}</td>
-                <td class="border px-4 py-2 bg-gray-200">{{ $classroom->name }}</td>
-            </tr>
+                <tr>
+                    <td class="border px-4 py-2 text-center bg-gray-200">{{ $classroom->id }}</td>
+                    <td class="border px-4 py-2 bg-gray-200">{{ $classroom->name }}</td>
+                    <td class="border px-4 py-2 text-center bg-gray-200">
+                        @foreach($students as $student)
+                    {{ $student->name }} <br>
+                        @endforeach
+                    </td>
+                </tr>
             @endforeach
         </tbody>
     </table>
